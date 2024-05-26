@@ -5,10 +5,27 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  
+  <link rel="stylesheet" href="style.css">
   <title>Contact form | Frontend Mentor</title>
 </head>
 <body>
+  <main>
+    <div class="conatiner">
+      <h1>Contact Us</h1>
+      <form action="">
+        <label for="firstName">First Name *<input type="text" class="" id="firstName"></label>
+        <label for="lastName">Last Name *<input type="text" class="" id="lastName"></label>
+        <label for="email">Email Address *<input type="email" class="" id="email"></label>
+        <label for="general">Query Type * <input type="radio" class="" id="general" name="query">General Enquiry</label>
+        <label for="support"><input type="radio" class="" id="support" name="query">Support Request</label>
 
+        
+        <label for="mes"> Message *
+          <textarea id="mes"></textarea>
+        </label>
+        <label for="check"><input type="checkbox" class="" id="check" name="query"> I consent to being contacted by the team *</label>
+      </form>
+    </div>
+  </main>
 </body>
 </html>
