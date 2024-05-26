@@ -1,0 +1,19 @@
+:root {
+  --primary-color-lighter:  #dff1e7;
+  --primary-color-medium: #0c7d69;
+  --primary-color-red: #d73c3c;
+
+  --neutral-color-white: #ffffff;
+  --neutral-color-grey-500:  #87a3a6;
+  --neutral-color-grey-900: #2b4246;
+}
+* {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+  box-sizing: border-box;
+  outline: none;
+}
