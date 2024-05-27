@@ -16,4 +16,79 @@
 	vertical-align: baseline;
   box-sizing: border-box;
   outline: none;
+  font-family: "Karla", sans-serif;
+}
+body, html {
+  height: 100%;
+}
+main {
+  height: 100%;
+  padding: 20px 0;
+  background-color: var(--primary-color-lighter);
+}
+
+.flex {
+  display: flex;
+}
+
+.direction {
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.conatiner {
+  width: 100%;
+  height: 100%;
+  max-width: 540px;
+  padding: 20px ;
+  background-color: var(--neutral-color-white);
+  border-radius: 15px;
+}
+
+.w100 {
+  width: 100%;
+}
+
+h1 {
+  font-size: 30px;
+  font-weight: 700;
+}
+
+form {
+  margin-top: 30px;
+}
+
+.text {
+  width: 100%;
+  color: var(--neutral-color-grey-900);
+  font-size: 15px;
+}
+.input {
+  width: calc(100% - 10px);
+  padding: 10px 25px;
+  border: 1px solid var(--primary-color-medium);
+  border-radius: 5px;
+}
+
+label:nth-child(1) .input, .input_radio {
+  width: calc(100% - 10px);
+  margin-right: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+#mes {
+  height: 120px;
+  resize: none;
+}
+
+.button, .input_submit {
+  padding: 10px 25px;
+  color: var(--neutral-color-white);
+  background-color: var(--primary-color-medium);
+  text-align: center;
+  cursor: pointer;
+  border-radius: 5px;
 }
