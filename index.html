@@ -6,24 +6,34 @@
 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
   <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
   <title>Contact form | Frontend Mentor</title>
 </head>
 <body>
-  <main>
+  <main class="flex direction">
     <div class="conatiner">
       <h1>Contact Us</h1>
       <form action="">
-        <label for="firstName">First Name *<input type="text" class="" id="firstName"></label>
-        <label for="lastName">Last Name *<input type="text" class="" id="lastName"></label>
-        <label for="email">Email Address *<input type="email" class="" id="email"></label>
-        <label for="general">Query Type * <input type="radio" class="" id="general" name="query">General Enquiry</label>
-        <label for="support"><input type="radio" class="" id="support" name="query">Support Request</label>
-
+        <div class="flex">
+          <label class="text" for="firstName">First Name *<input type="text" class="input" id="firstName"></label>
+          <label class="text" for="lastName">Last Name *<input type="text" class="input"  id="lastName"></label>
+        </div>
+        <label class="text" for="email">Email Address *<input type="email" class="input" id="email"></label>
         
-        <label for="mes"> Message *
-          <textarea id="mes"></textarea>
-        </label>
-        <label for="check"><input type="checkbox" class="" id="check" name="query"> I consent to being contacted by the team *</label>
+         <p class="text">Query Type *</p>
+          <div class="flex">
+            <label class="input input_radio" for="general"><input type="radio" class="" id="general" name="query"> General Enquiry</label>
+            <label class="input input_radio" for="support"><input type="radio" class="" id="support" name="query"> Support Request</label>
+          </div>
+
+          <label class="text" for="mes"> Message *
+            <textarea id="mes" class="input"></textarea>
+          </label>
+
+          <label class="text" for="check"><input type="checkbox" class="" id="check" name="query"> I consent to being contacted by the team *</label>
+        <div class="button"><input class="input_submit" type="submit" value="Submit"></div>
       </form>
     </div>
   </main>
