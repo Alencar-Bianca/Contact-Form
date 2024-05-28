@@ -35,15 +35,17 @@ main {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  padding: 0 2%;
 }
 
-.conatiner {
+.container {
   width: 100%;
-  height: 100%;
+  height: 90%;
   max-width: 540px;
-  padding: 20px ;
+  padding: 20px 1%;
   background-color: var(--neutral-color-white);
   border-radius: 15px;
+  box-sizing: border-box;
 }
 
 .w100 {
@@ -59,16 +61,28 @@ form {
   margin-top: 30px;
 }
 
+.container-input {
+  margin: 20px 0;
+}
+
 .text {
   width: 100%;
   color: var(--neutral-color-grey-900);
+  margin: 8px 0;
   font-size: 15px;
 }
 .input {
   width: calc(100% - 10px);
   padding: 10px 25px;
-  border: 1px solid var(--primary-color-medium);
+  border: 1px solid var(--neutral-color-grey-500);
   border-radius: 5px;
+  cursor: pointer;
+  margin: 5px 0;
+}
+
+.input:hover {
+  border: 1px solid var(--primary-color-medium);
+  
 }
 
 label:nth-child(1) .input, .input_radio {
@@ -78,10 +92,49 @@ label:nth-child(1) .input, .input_radio {
   align-items: center;
   gap: 10px;
 }
+input[type="checkbox"],input[type="radio"]{
+  appearance: none;
+  -webkit-appearance: none;
+  width: 16px; 
+  height: 16px;
+  border: 1px solid #ccc; 
+}
 
+input[type="radio"]:checked {
+  border: 1px solid var(--primary-color-medium); 
+  border-radius: 50%;
+  background-color: var(--primary-color-medium); 
+}
+
+input[type="checkbox"]:checked::before {
+  content: 'x';
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: none;
+  width: 14px;
+  height: 14px;
+  color: var(--neutral-color-white);
+  background-color: var(--primary-color-medium);  
+}
+
+input[type="radio"]{
+border-radius: 50%;
+}
 #mes {
   height: 120px;
   resize: none;
+}
+
+.input_check {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.input_radio{
+  margin-right: 15px;
+  cursor: pointer;
 }
 
 .button, .input_submit {
@@ -91,4 +144,19 @@ label:nth-child(1) .input, .input_radio {
   text-align: center;
   cursor: pointer;
   border-radius: 5px;
+}
+
+@media screen and (max-width: 414px) {
+  .container {
+    height: auto; 
+  }
+  
+  .flex {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+  }
+  .container-input {
+    margin: 16px 0;
+  }
 }

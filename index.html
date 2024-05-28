@@ -13,14 +13,16 @@
 </head>
 <body>
   <main class="flex direction">
-    <div class="conatiner">
+    <div class="container">
       <h1>Contact Us</h1>
       <form action="">
-        <div class="flex">
+        <div class="flex container-input">
           <label class="text" for="firstName">First Name *<input type="text" class="input" id="firstName"></label>
           <label class="text" for="lastName">Last Name *<input type="text" class="input"  id="lastName"></label>
         </div>
-        <label class="text" for="email">Email Address *<input type="email" class="input" id="email"></label>
+        <div class="container-input">
+          <label class="text" for="email">Email Address *<input type="email" class="input" id="email"></label>
+        </div>
         
          <p class="text">Query Type *</p>
           <div class="flex">
@@ -28,12 +30,15 @@
             <label class="input input_radio" for="support"><input type="radio" class="" id="support" name="query"> Support Request</label>
           </div>
 
-          <label class="text" for="mes"> Message *
-            <textarea id="mes" class="input"></textarea>
-          </label>
+          <div class="container-input">
+            <label class="text" for="mes"> Message *
+              <textarea id="mes" class="input"></textarea>
+            </label>
+          </div>
 
-          <label class="text" for="check"><input type="checkbox" class="" id="check" name="query"> I consent to being contacted by the team *</label>
-        <div class="button"><input class="input_submit" type="submit" value="Submit"></div>
+          <div class="container-input"><label class="text input_check" for="check"><input type="checkbox" class="input_radio" id="check" name="query"> I consent to being contacted by the team *</label></div>
+
+        <div class="button container-input"><input class="input_submit " type="submit" value="Submit"></div>
       </form>
     </div>
   </main>
