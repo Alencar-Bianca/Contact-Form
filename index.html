@@ -15,32 +15,40 @@
   <main class="flex direction">
     <div class="container">
       <h1>Contact Us</h1>
-      <form action="">
+      <form action="" method="post" id="form">
         <div class="flex container-input">
-          <label class="text" for="firstName">First Name *<input type="text" class="input" id="firstName"></label>
-          <label class="text" for="lastName">Last Name *<input type="text" class="input"  id="lastName"></label>
+          <label class="text" for="firstName">First Name *<input type="text" class="input" id="firstName" name="firstName"></label>
+          <label class="text" for="lastName">Last Name *<input type="text" class="input"  id="lastName" name="lastName"></label>
         </div>
+
         <div class="container-input">
-          <label class="text" for="email">Email Address *<input type="email" class="input" id="email"></label>
+          <label class="text" for="email">Email Address *<input type="email" class="input" id="email" name="email"></label>
         </div>
         
+        <div class="container-input">
          <p class="text">Query Type *</p>
           <div class="flex">
             <label class="input input_radio" for="general"><input type="radio" class="" id="general" name="query"> General Enquiry</label>
             <label class="input input_radio" for="support"><input type="radio" class="" id="support" name="query"> Support Request</label>
           </div>
+        </div>
 
           <div class="container-input">
             <label class="text" for="mes"> Message *
-              <textarea id="mes" class="input"></textarea>
+              <textarea id="mes" class="input" name="message"></textarea>
             </label>
           </div>
 
-          <div class="container-input"><label class="text input_check" for="check"><input type="checkbox" class="input_radio" id="check" name="query"> I consent to being contacted by the team *</label></div>
+          <div class="container-input">
+            <label class="text input_check" for="check">
+              <input type="checkbox" class="input_radio" id="check" name="check"> I consent to being contacted by the team *
+            </label>
+          </div>
 
-        <div class="button container-input"><input class="input_submit " type="submit" value="Submit"></div>
+        <div id="button_submit" class="button container-input"><input class="input_submit " type="submit" value="Submit"></div>
       </form>
     </div>
   </main>
+  <script src="./script.js"></script>
 </body>
 </html>
