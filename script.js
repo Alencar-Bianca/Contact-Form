@@ -29,6 +29,19 @@ function validateForm() {
       input.element.classList.remove("error");
       input.span.classList.add("d-none");
     }
+
+    if (input.element.id === 'email') {
+      const emailValue = input.element.value.trim();
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; 
+      const isValidEmail = emailRegex.test(emailValue); 
+      if (!isValidEmail) {
+        input.element.classList.add("error");
+        input.span.classList.remove("d-none");
+      } else {
+        input.element.classList.remove("error");
+        input.span.classList.add("d-none");
+      }
+    }
   });
 
   radioButtons.forEach(radioButton => {
