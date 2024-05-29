@@ -3,7 +3,7 @@
 </h1>
 
 <p align="center">
-  <img alt="" src="" width="100%">
+  <img alt="" src="https://github.com/Alencar-Bianca/contact-form/blob/main/templete.jpg" width="100%">
 </p>
 
 <p align="center">
@@ -18,7 +18,7 @@
 Executar para clonar o projeto:
 
 ```bash
-git clone 
+git clone https://github.com/Alencar-Bianca/contact-form.git
 ```
 
 ## 🚀 Tecnologias
@@ -31,12 +31,12 @@ Esse projeto está sendo desenvolvido com as seguintes tecnologias:
 
 ## 🚧 Projeto:
 
-Link do Projeto: [Contact Form]()
+Link do Projeto: [Contact Form](https://challengeformcontact.netlify.app/)
 
 
 ## :memo: Licença
 
-Esse projeto está sob a licença MIT. Veja o arquivo [LICENSE]() para mais detalhes.
+Esse projeto está sob a licença MIT. Veja o arquivo [LICENSE](https://github.com/Alencar-Bianca/contact-form/blob/main/LICENSE) para mais detalhes.
 
 ---
 
