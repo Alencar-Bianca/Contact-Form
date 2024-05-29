@@ -29,9 +29,10 @@ Esse projeto está sendo desenvolvido com as seguintes tecnologias:
 <img height="25" src="https://user-images.githubusercontent.com/25181517/183898674-75a4a1b1-f960-4ea9-abcb-637170a00a75.png">
 <img height="25" src="https://user-images.githubusercontent.com/25181517/117447155-6a868a00-af3d-11eb-9cfe-245df15c9f3f.png">
 
-## 🚧 Projeto:
+## 🚧 Deploy:
 
-Link do Projeto: [Contact Form](https://challengeformcontact.netlify.app/)
+Netlify: [Contact Form](https://challengeformcontact.netlify.app/)
+GithubPages [Contact Form](https://alencar-bianca.github.io/contact-form/)
 
 
 ## :memo: Licença
