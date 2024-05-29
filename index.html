@@ -15,14 +15,22 @@
   <main class="flex direction">
     <div class="container">
       <h1>Contact Us</h1>
-      <form action="" method="post" id="form">
+      <form  id="form">
         <div class="flex container-input">
-          <label class="text" for="firstName">First Name *<input type="text" class="input" id="firstName" name="firstName"></label>
-          <label class="text" for="lastName">Last Name *<input type="text" class="input"  id="lastName" name="lastName"></label>
+          <div class="w100">
+            <label class="text" for="firstName">First Name *<input type="text" class="input" id="firstName" name="firstName"></label>
+            <span class="field d-none firstName">This field is required</span>
+          </div>
+          <div class="w100">
+            <label class="text" for="lastName">Last Name *<input type="text" class="input"  id="lastName" name="lastName"></label>
+            <span class="field d-none lastName">This field is required</span>
+          </div>
         </div>
+        
 
         <div class="container-input">
           <label class="text" for="email">Email Address *<input type="email" class="input" id="email" name="email"></label>
+          <span class="field d-none email">Please enter a valid email address</span>
         </div>
         
         <div class="container-input">
@@ -31,21 +39,27 @@
             <label class="input input_radio" for="general"><input type="radio" class="" id="general" name="query"> General Enquiry</label>
             <label class="input input_radio" for="support"><input type="radio" class="" id="support" name="query"> Support Request</label>
           </div>
+          <span class="field d-none radio">Please select a query typ</span>
         </div>
 
           <div class="container-input">
             <label class="text" for="mes"> Message *
               <textarea id="mes" class="input" name="message"></textarea>
             </label>
+            <span class="field d-none message">This field is required</span>
           </div>
 
           <div class="container-input">
             <label class="text input_check" for="check">
               <input type="checkbox" class="input_radio" id="check" name="check"> I consent to being contacted by the team *
             </label>
+            <span class="field d-none checkbox">To submit this form, please consent to being contacted</span>
           </div>
 
-        <div id="button_submit" class="button container-input"><input class="input_submit " type="submit" value="Submit"></div>
+        <div id="button_submit" class="button container-input">
+          <input class="input_submit " type="submit" value="Submit">
+          
+        </div>
       </form>
     </div>
   </main>
