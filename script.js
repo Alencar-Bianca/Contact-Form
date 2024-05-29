@@ -1,6 +1,8 @@
 const form = document.getElementById('form');
 const submitButton = document.querySelector('#button_submit');
 
+const message = document.querySelector('.message-success');
+
 submitButton.addEventListener('click', (e) => {
   e.preventDefault();
   validateForm();
@@ -62,12 +64,18 @@ function validateForm() {
     checkboxSpan.classList.add("d-none");
   }
 
+  
   if (inputs.every(input => input.element.value !== '') && checkbox.checked && isCheckedRadio) {
+    
     messageSuccess();
-    form.submit();
+    setTimeout(() => {
+  
+  
+      form.submit();
+    }, 3000);
   }
 }
 
 function messageSuccess() {
-  alert('formulario enviado')
+  message.classList.remove('d-none')
 }
