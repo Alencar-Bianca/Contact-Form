@@ -31,7 +31,7 @@ Esse projeto está sendo desenvolvido com as seguintes tecnologias:
 
 ## 🚧 Deploy:
 
-Netlify: [Contact Form](https://challengeformcontact.netlify.app/)
+Netlify: [Contact Form](https://challengeformcontact.netlify.app/)<br/>
 GithubPages [Contact Form](https://alencar-bianca.github.io/contact-form/)
 
 
