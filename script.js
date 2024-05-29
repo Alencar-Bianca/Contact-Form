@@ -63,6 +63,11 @@ function validateForm() {
   }
 
   if (inputs.every(input => input.element.value !== '') && checkbox.checked && isCheckedRadio) {
+    messageSuccess();
     form.submit();
   }
+}
+
+function messageSuccess() {
+  alert('formulario enviado')
 }
