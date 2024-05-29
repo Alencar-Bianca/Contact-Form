@@ -1,87 +1,55 @@
-const name = document.querySelector('#firstName');
-const lastName = document.querySelector('#lastName');
-const email = document.querySelector('#email');
-const message = document.querySelector('#mes');
-
-const checkbox = document.getElementById('check');
-const radioButtons = document.querySelectorAll('input[type="radio"][name="query"]');
-let isCheckedRaio = false
-
-const submit = document.querySelector('#button_submit');
 const form = document.getElementById('form');
+const submitButton = document.querySelector('#button_submit');
 
-const nameSpan = document.querySelector('.firstName');
-const lastNameSpan = document.querySelector('.lastName');
-const emailSpan = document.querySelector('.email');
-const messageSpan = document.querySelector('.message');
+submitButton.addEventListener('click', (e) => {
+  e.preventDefault();
+  validateForm();
+});
 
-const checkboxSpan = document.querySelector('.checkbox');
-const radioButtonsSpan = document.querySelector('.radio')
+function validateForm() {
+  const inputs = [
+    { element: document.querySelector('#firstName'), span: document.querySelector('.firstName') },
+    { element: document.querySelector('#lastName'), span: document.querySelector('.lastName') },
+    { element: document.querySelector('#email'), span: document.querySelector('.email') },
+    { element: document.querySelector('#mes'), span: document.querySelector('.message') }
+  ];
 
-submit.addEventListener('click', (e) => {
-  e.preventDefault()
-  radioButtons.forEach(radioButton => {
-      if (radioButton.checked) {
-        isCheckedRaio = true;
-      }
+  let isCheckedRadio = false;
+  const radioButtons = document.querySelectorAll('input[type="radio"][name="query"]');
+
+  const checkbox = document.getElementById('check');
+  const checkboxSpan = document.querySelector('.checkbox');
+  const radioButtonsSpan = document.querySelector('.radio');
+
+  inputs.forEach(input => {
+    if (input.element.value === '') {
+      input.element.classList.add("error");
+      input.span.classList.remove("d-none");
+    } else {
+      input.element.classList.remove("error");
+      input.span.classList.add("d-none");
+    }
   });
 
+  radioButtons.forEach(radioButton => {
+    if (radioButton.checked) {
+      isCheckedRadio = true;
+    }
+  });
 
-  if (name.value === '') {
-    name.classList.add("error");
-    nameSpan.classList.remove("d-none");
-   } else {
-    name.classList.remove("error");
-    nameSpan.classList.add("d-none");
-   }
-
-  if (lastName.value === '') {
-    lastName.classList.add("error");
-    lastNameSpan.classList.remove("d-none");
-   } else {
-    lastName.classList.remove("error");
-    lastNameSpan.classList.add("d-none");
-   }
-
-  if (email.value === '') {
-    email.classList.add("error");
-    emailSpan.classList.remove("d-none");
-   } else {
-    email.classList.remove("error");
-    emailSpan.classList.add("d-none");
-   }
-
-  if (message.value === '') {
-    message.classList.add("error");
-    messageSpan.classList.remove("d-none");
-
-   } else {
-    message.classList.remove("error");
-    messageSpan.classList.add("d-none");
-   }
+  if (!isCheckedRadio) {
+    radioButtonsSpan.classList.remove("d-none");
+  } else {
+    radioButtonsSpan.classList.add("d-none");
+  }
 
   if (!checkbox.checked) {
     checkboxSpan.classList.remove("d-none");
-        
-   } else {
+  } else {
     checkboxSpan.classList.add("d-none");
-   }
+  }
 
-  if (!isCheckedRaio) {
-    radioButtonsSpan.classList.remove("d-none");
-        
-   } else {
-    radioButtonsSpan.classList.add("d-none");
-   }
-
-   if(name.value !== '' && lastName.value !== '' && email.value !== '' && message.value !== '' && checkbox.checked && isCheckedRaio) {
+  if (inputs.every(input => input.element.value !== '') && checkbox.checked && isCheckedRadio) {
     form.submit();
-   }
-  
-});
-
-function alertError(message, el) {
-
-  el.classList.add("error");
-
+  }
 }
