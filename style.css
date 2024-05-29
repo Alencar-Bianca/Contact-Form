@@ -158,6 +158,34 @@ border-radius: 50%;
   display: none;
 }
 
+.message-success {
+  background-color: #284040;
+  color: var(--neutral-color-white);
+  border-radius: 8px;
+  padding: 20px;
+}
+
+.message-success h2 {
+  font-size: 15px;
+  margin-bottom: 10px;
+}
+
+.message-success h2::before {
+  content: '✓';
+  font-size: 8px;
+  border: 1px solid var(--neutral-color-white);
+  border-radius: 50%; 
+  padding: 3px;
+  margin-right: 5px; 
+  vertical-align: middle;
+}
+
+.message-success p {
+  color: var(--neutral-color-grey-500);
+  font-size: 14px;
+}
+
+
 @media screen and (max-width: 414px) {
   .container {
     height: auto; 
